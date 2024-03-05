@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #34495e;
+    color: #fff;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .left-side, .right-side {
+    width: 50%;
+    padding: 20px;
+  }
+  
+  form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    box-shadow: -1px 25px 30px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+  }
+   
+  .right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    text-align: center;;
+  }
+  
+  .social-media {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .social-media a {
+    position: relative;
+    text-decoration: none;
+    margin-right: 120px;
+    color: #fff;
+  }
+
+  .social-media a::before,
+  .social-media a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.2s ease;
+  }
+  .social-media a::before {
+    top: 100%;
+    left: 0;
+  }
+
+  .social-media a::after {
+    bottom: 100%;
+    right: 0;
+  }
+
+  .social-media a:hover::before,
+  .social-media a:hover::after {
+    width: 100%;
+  }
+  
+  .card-book{
+    background: white;
+    width: 300px;
+    display: inline-block;
+    margin: auto;
+    border-radius: 12px;
+    position: relative;
+    text-align: center;
+    box-shadow: -1px 25px 30px -1px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    background-color: #3498db; /* Cor chamativa */
+    color: #fff; /* Cor do texto */
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Sombras */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px); /* Efeito de levantamento ao passar o mouse */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.12); /* Ajuste de sombra ao passar o mouse */
+  }
+
+  /*Responsividade*/
+@media (max-width: 768px){
+  .container {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .left-side, .right-side {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .social-media a {
+    margin-right: 20px;
+  }
+}
